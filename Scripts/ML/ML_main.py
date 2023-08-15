@@ -1,7 +1,6 @@
 
 #commands:
 #conda activate tf
-#/mnt/c/Users/Jack PC/Financial-Data-Visualizer/Portfolio-components/scripts/ML
 
 import os
 import numpy as np
@@ -11,12 +10,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.layers import LSTM, Dense, Input, concatenate
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error,r2_score
 
-os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # Use the correct GPU device index
-physical_devices = tf.config.list_physical_devices('GPU')
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+#To use GPU
+#os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # Use the correct GPU device index
+#physical_devices = tf.config.list_physical_devices('GPU')
+#tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+
 #creating the model based off of current data
 #this training data will try to predict the year 2022 data from ALL relevant data
 def main():

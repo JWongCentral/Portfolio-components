@@ -2,6 +2,7 @@ from ticker_file import ticker_info
 from ticker_downloader import ticker_downloader
 import os
 import pandas as pd
+
 class ticker_file_manager():
 
     def __init__(self,src = './ticker', dest_data = './ticker/data/ticker'):
