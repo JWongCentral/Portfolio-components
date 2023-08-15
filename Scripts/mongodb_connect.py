@@ -3,7 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import pandas as pd
 import os
-uri = "mongodb+srv://jackbwong1998:ZfjVVYx6AWwMOqIc@testinginfo.l6duluk.mongodb.net/?retryWrites=true&w=majority"
+uri = 'SECRET'
 client = None
 
 def open_connection():
